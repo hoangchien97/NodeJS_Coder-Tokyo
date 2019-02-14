@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hoàng Chiến"
+    },
+    {
+      "id": 2,
+      "name": "Nhung"
+    },
+    {
+      "name": "a"
+    },
+    {
+      "name": "Dũng"
+    },
+    {
+      "name": "a"
+    },
+    {
+      "name": "Hoàng Chiến",
+      "phone": "0987971097"
+    }
+  ]
+}
