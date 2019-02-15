@@ -2,14 +2,13 @@ var express = require('express');
 var router = express.Router();
 // MVC  model-view-controller
 var controller = require('../controllers/users.controller.js');
-var validateUser = require('../validate/user.validate')
-// index
-
+var validateUser = require('../validate/user.validate');
+var authMiddleware = require('../middlewares/auth.middleware');
 router.get('/cookie',function(req,res,next){
 	res.cookie('userId',12345);
 	res.send('Hello');
 });
-router.get('/',controller.index);
+router.get('/',authMiddleware.requireAuth,controller.index);// index
 // Search
 router.get('/search',controller.search);
 //view User detail

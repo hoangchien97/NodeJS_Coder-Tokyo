@@ -15,11 +15,11 @@
       "name": "Dũng"
     },
     {
-      "name": "a"
-    },
-    {
+      "id": 3,
       "name": "Hoàng Chiến",
-      "phone": "0987971097"
+      "phone": "0987971097",
+      "email": "hoangducchien97@gmail.com",
+      "password": "ducchien97"
     }
   ]
 }

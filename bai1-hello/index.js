@@ -3,7 +3,9 @@ var bodyParser = require('body-parser');
 // var route = require('route')
 var cookieParser = require('cookie-parser')
 var useRouter = require('./routes/user');
-
+var authRouter = require('./routes/auth.routes');
+// middleware routerUser
+var authMiddleware = require('./middlewares/auth.middleware');
 
 
 var app = express();
@@ -18,7 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(express.static('public')); // set path static
 app.use(cookieParser()); // use pagekage cookieParser.
 //use Route users
-app.use('/users',useRouter);
+app.use('/users',authMiddleware.requireAuth,useRouter);
+app.use('/auth',authRouter);
 // Method
 // request : Người dùng gửi lên 
 // response : Từ server trả về
