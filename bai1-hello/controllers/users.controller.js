@@ -32,6 +32,7 @@ module.exports.detailsUser = function(req,res){
 	});
 };
 module.exports.create = function(req,res){
+	console.log(req.cookies);
 	res.render('users/create');
 };
 module.exports.store = function(req,res){
